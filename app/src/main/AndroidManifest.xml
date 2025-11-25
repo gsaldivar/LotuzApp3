@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- PERMISO OBLIGATORIO PARA RETROFIT -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permiso para leer imágenes de la galería (dependiendo de la versión de Android) -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!-- Escritura en almacenamiento para Android <= 10 (API 29). No se usa en versiones nuevas. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lotuz_2"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:targetApi="31">
+
+        <activity
+            android:name="com.miapp.lotuz_2.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.miapp.lotuz_2.ui.LoginActivity" />
+
+        <!-- HOME CLIENTE -->
+        <activity android:name="com.miapp.lotuz_2.ui.ClientHomeActivity" />
+
+        <!-- CARRITO -->
+        <activity android:name="com.miapp.lotuz_2.ui.CartActivity" />
+
+        <!-- HOME ADMIN -->
+        <activity android:name="com.miapp.lotuz_2.ui.AdminHomeActivity" />
+
+        <!-- ÓRDENES ADMIN -->
+        <activity android:name="com.miapp.lotuz_2.ui.AdminOrdersActivity" />
+
+        
+
+        <!-- AGREGAR PRODUCTO (ADMIN) -->
+        <activity android:name="com.miapp.lotuz_2.ui.AdminAddProductActivity" />
+
+    </application>
+
+</manifest>

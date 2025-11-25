@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tvOrderId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Orden #"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvOrderTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: $0"/>
+
+    <TextView
+        android:id="@+id/tvOrderStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pending"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnReject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rechazar"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnShip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"/>
+    </LinearLayout>
+
+</LinearLayout>
+
